@@ -13,6 +13,7 @@
 [![Paper](https://img.shields.io/badge/arXiv-2508.03178-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2508.03178)
 [![collections](https://img.shields.io/badge/HFCollections-Light--IF-FFD21E?logo=huggingface&style=for-the-badge)](https://huggingface.co/collections/qihoo360/light-if-688753563c174e9d14d6978f)
 
+[![dataset](https://img.shields.io/badge/HFData-Light--IF--SFTData-FFD21E?logo=huggingface&style=for-the-badge)](https://huggingface.co/datasets/qihoo360/Light-IF-SFTData)
 [![Blog](https://img.shields.io/badge/Blog-Light--IF-lightgrey?style=for-the-badge)](https://zhuanlan.zhihu.com/p/1936535948360918628)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 </div>
