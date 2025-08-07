@@ -2,19 +2,22 @@
 <!-- markdownlint-disable html -->
 <!-- markdownlint-disable no-duplicate-header -->
 
-# Light-IF: Endowing LLMs with Generalizable Reasoning via Preview and Self-Checking for Complex Instruction Following
+# Light-IF: Endowing LLMs with Generalizable Reasoning via Preview and Self-Checking
 
 <div align="center">
   <img src="https://cdn-uploads.huggingface.co/production/uploads/64eeb81ad0ceda46832e0160/b2_eQV04B8xSdYJZnB2FD.png" width="95%" alt="Light-IF-32B" />
 </div>
 <hr>
-<div align="center" style="line-height: 1;">
-  🤗 <a href="https://huggingface.co/qihoo360/Light-IF-32B">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2508.03178">Paper Link</a> &nbsp&nbsp|&nbsp&nbsp  📑 <a href="https://zhuanlan.zhihu.com/p/1936535948360918628">Blog</a> &nbsp&nbsp 
-<br>
-  </a>
+<div align="center">
+  
+[![Paper](https://img.shields.io/badge/arXiv-2508.03178-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2508.03178)
+[![collections](https://img.shields.io/badge/HFCollections-Light--IF-FFD21E?logo=huggingface&style=for-the-badge)](https://huggingface.co/collections/qihoo360/light-if-688753563c174e9d14d6978f)
+
+[![Blog](https://img.shields.io/badge/Blog-Light--IF-lightgrey?style=for-the-badge)](https://zhuanlan.zhihu.com/p/1936535948360918628)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 </div>
 
-## Evaluation 
+## 🧪 Benchmarks
 |Model|SuperClue|IFEval|CFBench|IFBench|
 | ---- | ---- | ---- | ---- | ---- |
 |Qwen3-4B|0.225|0.888|0.787|0.382|
@@ -34,27 +37,47 @@
 | [**Light-IF-8B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-8B) |**0.471**|**0.932**|**0.82**|**0.473**| 
 | [**Light-IF-32B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-32B) |**0.575**|**0.938**|**0.85**|**0.575**| 
 
-## Introduction
-**Instruction following** is a core ability of large language models (LLMs), but performance remains inconsistent, especially on complex tasks.
+> **Light-IF** is a powerful instruction-following large language model (LLM) series that leverages *Preview-Checking* reasoning to handle complex instructions with generalizable behavior — all trained with less than $3,000 in compute.
 
-We identify **lazy reasoning** during the thinking stage as a key cause of poor instruction adherence.
+---
 
-To address this, we propose a framework that promotes rigorous reasoning through **previewing and self-checking**.
+## 📌 Highlights
 
-Our method begins by generating instruction data with **complex constraints**, filtering out samples that are too easy or too difficult. We then use rejection sampling to build a small but high-quality dataset for model adaptation.
+- 🔍 Identifies and overcomes *lazy reasoning* in LLMs.
+- 🧩 Integrates Preview + Self-Checking mechanisms.
+- 🚀 Combines Entropy-SFT and TEA-RL for robust training.
+- 💡 Achieves state-of-the-art results on instruction benchmarks.
+- 💰 Trained efficiently on A800 GPUs at very low cost.
 
-Training involves entropy-preserving supervised fine-tuning (**Entropy-SFT**) and token-wise entropy-adaptive reinforcement learning (**TEA-RL**), guided by rule-based multidimensional rewards.
+---
 
-This approach encourages models to plan ahead and verify their outputs, fostering more generalizable reasoning abilities.
+## 🔨 Technical Overview
 
-Experiments show consistent improvements across model sizes. Notably, our 32B model outperforms both larger open-source models like **DeepSeek-R1** and closed-source models like **ChatGPT-4o** on challenging instruction-following benchmarks.
+Light-IF addresses the challenge of poor instruction-following due to lazy reasoning. Its pipeline includes:
+
+### 1. Hardness-aware Prompt Synthesis
+- Construct prompts with complex verifiable constraints.
+- Filter invalid outputs using LLMs to form high-quality datasets.
+
+### 2. Zero-RL Training
+- Train a base model to reject lazy thinking with length-based and correctness-based rewards.
+
+### 3. Entropy-Preserving SFT
+- Select tokens by balancing NLL and entropy.
+- Prevents overfitting and preserves model diversity.
+
+### 4. TEA-RL (Token-wise Entropy-Adaptive RL)
+- Dense rewards for partially satisfying constraints.
+- Entropy-regularized policy gradient for stable learning.
 
 <p align="left"><b></b> The overall framework of the proposed method:</p>
 <p align="left">
   <img src="https://github.com/user-attachments/assets/8a714c31-cad7-475d-936c-300742f8d4bc" alt="The overall framework of the proposed method" width="600"/>
 </p>
 
-## Quickstart
+---
+
+## 💻 Quick Usage
 
 The following contains a code snippet illustrating how to use the model generate content based on given inputs. 
 ```python
@@ -100,10 +123,22 @@ print("thinking content:", thinking_content)
 print("content:", content)
 ```
 
-## License & Acknowledgements
+---
 
-All released materials of this project follow the open-source license Apache 2.0.
+## ⚙️ Training Cost
 
+| Model | GPUs | Hours | Cost (USD) |
+|-------|------|-------|------------|
+| Light-IF-1.7B | A800×4 | 10 | ~$342 |
+| Light-IF-32B  | A800×88 | 30 | ~$2,800 |
+
+---
+
+## 📜 License
+
+This repository is licensed under the **Apache 2.0 License**.
+
+---
 
 ## Citation
 
