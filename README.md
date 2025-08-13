@@ -18,6 +18,8 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 </div>
 
+### Aug. 13 update: [SOTA 14B](https://huggingface.co/qihoo360/Light-IF-14B) 
+
 ## 🧪 Benchmarks
 |Model|SuperClue|IFEval|CFBench|IFBench|
 | ---- | ---- | ---- | ---- | ---- |
@@ -37,8 +39,13 @@
 | [**Light-IF-4B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-4B) |**0.445**|**0.916**|**0.80**|**0.443**| 
 | [**Light-IF-8B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-8B) |**0.471**|**0.932**|**0.82**|**0.473**| 
 | [**Light-IF-32B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-32B) |**0.575**|**0.938**|**0.85**|**0.575**| 
+| [**Light-IF-14B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-14B) |**0.589**|**0.962**|**0.833**|**0.697**| 
 
 > **Light-IF** is a powerful instruction-following large language model (LLM) series that leverages *Preview-Checking* reasoning to handle complex instructions with generalizable behavior — all trained with less than $3,000 in compute.
+
+[**Light-IF-14B** 🤗](https://huggingface.co/qihoo360/Light-IF-14B) is the most powerful 14B instruction-following model we have open-sourced, even outperforming Light-IF-32B.
+
+This remarkable performance is largely attributed to our carefully designed curriculum learning strategy.
 
 ---
 
