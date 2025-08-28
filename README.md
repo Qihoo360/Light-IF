@@ -48,6 +48,8 @@
 
 This remarkable performance is largely attributed to our carefully designed curriculum learning strategy.
 
+<img src="./wechat-group-flip.jpg" width="200" style="display: block; margin: 0 auto;"/>
+
 ---
 
 ## 📌 Highlights
