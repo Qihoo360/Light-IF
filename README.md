@@ -161,3 +161,6 @@ This repository is licensed under the **Apache 2.0 License**.
   year={2025}
 }
 ```
+
+## Star History
+![](https://api.star-history.com/svg?repos=Qihoo360/Light-IF&type=Date)
