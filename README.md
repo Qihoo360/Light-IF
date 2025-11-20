@@ -15,10 +15,12 @@
 
 [![dataset](https://img.shields.io/badge/HFData-Light--IF--SFTData-FFD21E?logo=huggingface&style=for-the-badge)](https://huggingface.co/datasets/qihoo360/Light-IF-SFTData)
 [![Blog](https://img.shields.io/badge/Blog-Light--IF-lightgrey?style=for-the-badge)](https://zhuanlan.zhihu.com/p/1936535948360918628)
+[![SuperCLUE-CPIF](https://img.shields.io/badge/Paper-SuperCLUE--CPIF-lightgrey?style=for-the-badge)]([https://zhuanlan.zhihu.com/p/1936535948360918628](https://mp.weixin.qq.com/s/pcBrykyK99dfWA5WSqj1jw))
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 </div>
 
 ### Aug. 13 update: [SOTA 14B](https://huggingface.co/qihoo360/Light-IF-14B) 
+### Light-IF was accepted as an Oral presentation at AAAI-26.
 
 ## 🧪 Benchmarks
 |Model|SuperClue|IFEval|CFBench|IFBench|
@@ -43,6 +45,16 @@
 | [**Light-IF-14B (ours)** 🤗](https://huggingface.co/qihoo360/Light-IF-14B) |**0.589**|**0.962**|**0.833**|**0.697**| 
 
 > **Light-IF** is a powerful instruction-following large language model (LLM) series that leverages *Preview-Checking* reasoning to handle complex instructions with generalizable behavior — all trained with less than $3,000 in compute.
+
+## SuperCLUE-CPIF
+In the latest SuperCLUE-CPIF evaluation, Light-IF-14B (shown as 360zhinao3-o1.5 in the figure below) reached the domestic **SOTA**, outperforming **ERNIE-X1.1** and **DeepSeek-V3.2-Exp-Thinking**. 
+
+SuperCLUE-CPIF (Chinese Precise Instruction Following) is a benchmark designed to assess how well large language models (LLMs) can accurately follow complex, multi-constraint instructions in Chinese.
+
+<p align="left"></p>
+<p align="left">
+  <img src="https://cdn-uploads.huggingface.co/production/uploads/64eeb81ad0ceda46832e0160/JUB9i0wvj-eROi6bJpbEI.png" alt="" width="600"/>
+</p>
 
 [**Light-IF-14B** 🤗](https://huggingface.co/qihoo360/Light-IF-14B) is the most powerful 14B instruction-following model we have open-sourced, even outperforming Light-IF-32B.
 
