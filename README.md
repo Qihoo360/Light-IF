@@ -15,7 +15,7 @@
 
 [![dataset](https://img.shields.io/badge/HFData-Light--IF--SFTData-FFD21E?logo=huggingface&style=for-the-badge)](https://huggingface.co/datasets/qihoo360/Light-IF-SFTData)
 [![Blog](https://img.shields.io/badge/Blog-Light--IF-lightgrey?style=for-the-badge)](https://zhuanlan.zhihu.com/p/1936535948360918628)
-[![SuperCLUE-CPIF](https://img.shields.io/badge/Paper-SuperCLUE--CPIF-lightgrey?style=for-the-badge)]([https://zhuanlan.zhihu.com/p/1936535948360918628](https://mp.weixin.qq.com/s/pcBrykyK99dfWA5WSqj1jw))
+[![SuperCLUE-CPIF](https://img.shields.io/badge/Paper-SuperCLUE--CPIF-lightgrey?style=for-the-badge)](https://mp.weixin.qq.com/s/pcBrykyK99dfWA5WSqj1jw)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 </div>
 
